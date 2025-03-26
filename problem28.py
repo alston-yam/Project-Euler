@@ -1,10 +1,13 @@
-left = 0
-for i in range(1, 501):
-    counter = 0
-    for j in range(2, i+2):
-        if j != i+1:
-            counter += 2*(2**j)
+sum = 1
+temp = 3
+for i in range(2, 1001, 2):
+    for j in range(4):
+        sum += temp
+        if j != 3:
+            temp += i
         else:
-            counter += 2**j
-    left += 2*counter
+            temp += i + 2
+        print(sum, temp)
+        
     
+print(sum)
